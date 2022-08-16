@@ -1,14 +1,14 @@
-type Props ={
-    action: () => void
-    text: string
-}
+import { Children } from "react";
 
-export function Button({action , text}:Props) {
-    return(
-        
-        <button className="button"
-        onClick={action}>
-            {text}
-        </button>
-    )
+type Props = {
+  onClick: () => void;
+  children: string;
+};
+
+export function Button({ children, ...props }: Props) {
+  return (
+    <button className="button"  {...props}>
+      {children}
+    </button>
+  );
 }

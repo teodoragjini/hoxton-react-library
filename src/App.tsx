@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { Button } from "./components/Button";
 
+
 function App() {
   const [focus, setFocus] = useState(false);
 
@@ -10,19 +11,21 @@ function App() {
       {focus ? <h1>Good Jobbb</h1> : <h1>Focus More</h1>}
 
       <Button
-        action={() => {
+        onClick={() => {
           setFocus(true);
         }}
-        text=" I am learning React"
-      />
+      >
+        I am learning React
+      </Button>
 
       <Button
-        action={() => {
+        onClick={() => {
           setFocus(false);
         }}
-        text="I am Stuck"
-      />
-    </div> 
+      >
+        I am Stuck
+      </Button>
+    </div>
   );
 }
 
